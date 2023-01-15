@@ -25,10 +25,10 @@
           <a class="nav-link" href="<?php base_url();?>">Produk</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php base_url();?>#">Registrasi</a>
+          <a class="nav-link" href="<?php base_url();?>registrasi">Registrasi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php base_url();?>#">Hubungi Kami</a>
+          <a class="nav-link" href="<?php base_url();?>kontak">Hubungi Kami</a>
         </li>
     </div>
   </div>

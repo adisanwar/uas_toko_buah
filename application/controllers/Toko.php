@@ -20,18 +20,49 @@ class Toko extends CI_Controller {
 
     public function kontak()
     {
+
+        $data['kategori'] = ['Produk', 'Pelayanan', 'Lain - Lain'];
         $data['judul'] = 'Kontak Kami';
-        $this->load->view('templates/header', $data);
-		$this->load->view('home/kontak');
-        $this->load->view('templates/footer');
+        $data['data_mahasiswa'] = array();
+
+        $this->form_validation->set_rules('nama_pengirim', 'Nama Lengkap', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('kategori', 'Kategori', 'required');
+        $this->form_validation->set_rules('subjek', 'Subjek', 'required');
+        $this->form_validation->set_rules('isi_pesan', 'Isi pesan', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+
+        	$this->load->view('templates/header', $data);
+        	$this->load->view('home/kontak', $data);
+        	$this->load->view('templates/footer');
+
+        } else {
+
+            $this->Mahasiswa_model->inputKontak();
+            // // var_dump($datakontak);
+            $this->session->set_flashdata('flash', 'Ditambahkan');
+            redirect('home/produk');
+            
+        }
+
+       
+        // $this->load->view('templates/header', $data);
+		// $this->load->view('home/kontak');
+        // $this->load->view('templates/footer');
+
+        
+
     }
 
     public function registrasi()
     {
-        
+
+        $data['provinsi']=['Jawa Barat', 'Banten', 'DKI Jakarta', 'Jawa Tengah', 'Jawa Timur', 'Lampung', 'Sumatera Barat', 'Sumatera Selatan', 'Sumatera Utara'];
+        $data['jenis_kelamin'] = ['LK', 'PR'];
         $data['judul'] = 'Registrasi';
         $this->load->view('templates/header', $data);
 		$this->load->view('home/registrasi');
-        $this->load->view('templates/footer');
+        // $this->load->view('templates/footer');
     }
 }
