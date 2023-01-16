@@ -7,7 +7,7 @@ class Toko extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('Toko_model');
-        $this->load->library('form_validation');
+        // $this->load->library('form_validation');
     }
 	public function index()
 	{
@@ -21,15 +21,15 @@ class Toko extends CI_Controller {
     public function kontak()
     {
 
-        $data['kategori'] = ['Produk', 'Pelayanan', 'Lain - Lain'];
+        $data['kategori'] = ['Produk', 'Pelayanan', 'Lain Lain'];
         $data['judul'] = 'Kontak Kami';
-        $data['data_mahasiswa'] = array();
-
-        $this->form_validation->set_rules('nama_pengirim', 'Nama Lengkap', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-        $this->form_validation->set_rules('kategori', 'Kategori', 'required');
-        $this->form_validation->set_rules('subjek', 'Subjek', 'required');
-        $this->form_validation->set_rules('isi_pesan', 'Isi pesan', 'required');
+        
+        
+        $this->form_validation->set_rules('namapengirim', 'Nama Lengkap', 'required');
+        $this->form_validation->set_rules('emailpengirim', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('kategoripesan', 'Kategori', 'required');
+        $this->form_validation->set_rules('Subjekpesan', 'Subjek', 'required');
+        $this->form_validation->set_rules('Isipesan', 'Isi pesan', 'required');
 
         if ($this->form_validation->run() == FALSE) {
 
@@ -39,18 +39,13 @@ class Toko extends CI_Controller {
 
         } else {
 
-            $this->Mahasiswa_model->inputKontak();
-            // // var_dump($datakontak);
-            $this->session->set_flashdata('flash', 'Ditambahkan');
-            redirect('home/produk');
+            $this->Toko_model->inputKontak(); 
+            $this->load->view('home/kontak');
+            var_dump($_POST);
+            redirect('toko');
+            
             
         }
-
-       
-        // $this->load->view('templates/header', $data);
-		// $this->load->view('home/kontak');
-        // $this->load->view('templates/footer');
-
         
 
     }
@@ -61,8 +56,29 @@ class Toko extends CI_Controller {
         $data['provinsi']=['Jawa Barat', 'Banten', 'DKI Jakarta', 'Jawa Tengah', 'Jawa Timur', 'Lampung', 'Sumatera Barat', 'Sumatera Selatan', 'Sumatera Utara'];
         $data['jenis_kelamin'] = ['LK', 'PR'];
         $data['judul'] = 'Registrasi';
-        $this->load->view('templates/header', $data);
-		$this->load->view('home/registrasi');
-        // $this->load->view('templates/footer');
+
+        $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        // $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
+        $this->form_validation->set_rules('provinsi', 'Provinsi', 'required');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'required');
+        $this->form_validation->set_rules('kode_pos', 'Kode Pos', 'required');
+        $this->form_validation->set_rules('no_hp', 'Nomor HP', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+
+        	$this->load->view('templates/header', $data);
+        	$this->load->view('home/registrasi', $data);
+        	$this->load->view('templates/footer');
+
+        } else {
+
+            $this->Toko_model->inputRegistrasi(); 
+            // $this->load->view('home/kontak');
+            // var_dump($_POST);
+            redirect('toko');
+            
+            
+        }
     }
 }

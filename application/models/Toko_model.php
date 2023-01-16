@@ -20,7 +20,7 @@ class Toko_model extends CI_Model
         $provinsi = $data['provinsi'];
         $jenis_kelamin = $data['jenis_kelamin'];
         $alamat = $data['alamat'];
-        $kodepos = $data['jenis_kelamin'];
+        $kodepos = $data['kode_pos'];
         $nohp = $data['no_hp'];
         
 
@@ -47,8 +47,8 @@ class Toko_model extends CI_Model
 
         $data = $this->input->post();
         $tanggalkirim = $data['Tanggalkirim'];
-        $namapengirim = $data['Tanggalkirim'];
-        $email = $data['namapengirim'];
+        $namapengirim = $data['namapengirim'];
+        $email = $data['emailpengirim'];
         $subjek = $data['Subjekpesan'];
         $isipesan = $data['Isipesan'];
         $kategori = $data['kategoripesan'];

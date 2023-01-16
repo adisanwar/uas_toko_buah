@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'toko';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['kontak'] = 'toko/kontak';
+$route['registrasi'] = 'toko/registrasi';
+$route['produk'] = 'toko';

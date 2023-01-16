@@ -2,16 +2,16 @@
   <!-- Footer -->
   <footer
           class="text-center text-lg-start text-dark"
-          style="background-color: #ECEFF1"
+          style="background-color: whitesmoke"
           >
     <!-- Section: Social media -->
     <section
-             class="d-flex justify-content-between p-4 text-white"
-             style="background-color: #21D192"
+             class="text-center p-4 text-white"
+             style="background-color: #2980B9"
              >
       <!-- Left -->
       <div class="me-5">
-        <span>Get connected with us on social networks:</span>
+        <span>About</span>
       </div>
       <!-- Left -->
 
@@ -48,15 +48,13 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold">Company name</h6>
+            <h6 class="text-uppercase fw-bold">Bani Saleh</h6>
             <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+            Jl. Mayor Madmuin Hasibuan Jl. Mayor Oking No.33, RT.005/RW.008, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17147
             </p>
           </div>
           <!-- Grid column -->
@@ -64,7 +62,7 @@
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Products</h6>
+            <!-- <h6 class="text-uppercase fw-bold">Products</h6>
             <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #7c4dff; height: 2px"
@@ -85,40 +83,21 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Useful links</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p>
-              <a href="#!" class="text-dark">Your Account</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">Become an Affiliate</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">Shipping Rates</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">Help</a>
-            </p>
-          </div>
+         
           <!-- Grid column -->
 
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <!-- <h6 class="text-uppercase fw-bold">Contact</h6> -->
             <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <!-- <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
             <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
             <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
           </div>
           <!-- Grid column -->
         </div>
@@ -132,9 +111,9 @@
          class="text-center p-3"
          style="background-color: rgba(0, 0, 0, 0.2)"
          >
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/"
-         >MDBootstrap.com</a
+      © 2022 Copyright:
+      <a class="text-dark" href="#"
+         >Bani Saleh</a
         >
     </div>
     <!-- Copyright -->
